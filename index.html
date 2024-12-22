@@ -1,23 +1,60 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Spoon-Knife</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Your Name] - Software Architect</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
+<body class="bg-gray-50 font-sans">
+  <!-- Hero Section -->
+  <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center py-20">
+    <h1 class="text-4xl font-bold">Hi, I'm [Your Name]</h1>
+    <p class="text-xl mt-4">A Software Architect crafting scalable and efficient solutions</p>
+    <div class="mt-6">
+      <a href="resume.pdf" class="bg-white text-blue-600 px-6 py-2 rounded shadow-md">View Resume</a>
+      <a href="#contact" class="bg-indigo-600 px-6 py-2 rounded shadow-md">Contact Me</a>
+    </div>
+  </header>
 
-<body>
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-semibold">About Me</h2>
+      <p class="text-gray-600 mt-4">With over [X years] of experience, I specialize in...</p>
+    </div>
+  </section>
 
-<img src="forkit.gif" id="octocat" alt="" />
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-20 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-semibold">Portfolio</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+        <!-- Add project cards here -->
+        <div class="bg-white shadow p-6">
+          <h3 class="font-bold">Project Name</h3>
+          <p>Brief description of the project.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Feel free to change this text here -->
-<p>
-  Fork me? Fork you, @octocat!
-</p>
-<p>
-  Sean made a change
-</p>
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-semibold">Get in Touch</h2>
+      <form class="mt-8">
+        <input type="text" placeholder="Your Name" class="border p-2 w-1/2 mb-4">
+        <input type="email" placeholder="Your Email" class="border p-2 w-1/2 mb-4">
+        <textarea placeholder="Your Message" class="border p-2 w-1/2 mb-4"></textarea>
+        <button class="bg-blue-600 text-white px-6 py-2 rounded">Send Message</button>
+      </form>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>&copy; [Your Name] 2024. All rights reserved.</p>
+  </footer>
 </body>
 </html>
