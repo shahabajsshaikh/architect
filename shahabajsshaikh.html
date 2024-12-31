@@ -5,11 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shahabaj S. Shaikh - Cloud Architect</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" defer></script>
+  <style>
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Portfolio hover effect */
+    .portfolio-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    /* Social media hover */
+    .social-icon:hover {
+      transform: rotate(10deg) scale(1.2);
+      transition: transform 0.3s ease;
+    }
+  </style>
 </head>
 <body class="bg-gray-50 font-sans">
   <!-- Hero Section -->
   <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center py-20">
-    <h1 class="text-4xl font-bold">Hi, I'm Shahabaj S.</h1>
+    <h1 class="text-4xl font-bold animate-bounce">Hi, I'm Shahabaj S.</h1>
     <p class="text-xl mt-4">A Software Architect crafting scalable and efficient solutions.</p>
     <div class="mt-6">
       <a href="Shahabaj_S_Shaikh.pdf" class="bg-white text-blue-600 px-6 py-2 rounded shadow-md">View Resume</a>
@@ -29,47 +46,51 @@
   <section id="portfolio" class="py-20 bg-gray-100">
     <div class="container mx-auto text-center">
       <h2 class="text-3xl font-semibold">Portfolio</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-        <!-- Add project cards here -->
-        <div class="bg-white shadow p-6">
-          <h3 class="font-bold">Project Name</h3>
-          <p>Brief description of the project.</p>
-        </div>
+      <div id="portfolio-items" class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+        <!-- Portfolio items will be dynamically added here -->
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-<!--   <section id="contact" class="py-20 bg-white">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-semibold">Get in Touch</h2>
-      <form class="mt-8">
-        <input type="text" placeholder="Your Name" class="border p-2 w-1/2 mb-4">
-        <input type="email" placeholder="Your Email" class="border p-2 w-1/2 mb-4">
-        <textarea placeholder="Your Message" class="border p-2 w-1/2 mb-4"></textarea>
-        <button class="bg-blue-600 text-white px-6 py-2 rounded">Send Message</button>
-      </form>
-    </div>
-  </section>
- -->
-
+  <!-- Social Media Section -->
   <section id="social-media" class="py-10 text-center">
     <h2 class="text-2xl font-semibold mb-4">Follow Me</h2>
     <div class="flex justify-center space-x-4">
-      <!-- Twitter -->
-      <a href="https://x.com/ShahabajSShaikh" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-500 text-2xl" aria-label="Twitter">
-        <i class="fab fa-twitter">X</i>
+      <a href="https://x.com/ShahabajSShaikh" target="_blank" class="text-blue-400 hover:text-blue-500 text-2xl social-icon" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
       </a>
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/shahabaj-s-shaikh-89253188/" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:text-blue-800 text-2xl" aria-label="LinkedIn">
-        <i class="fab fa-linkedin">LinkedIn</i>
+      <a href="https://www.linkedin.com/in/shahabaj-s-shaikh-89253188/" target="_blank" class="text-blue-700 hover:text-blue-800 text-2xl social-icon" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
       </a>
     </div>
- </section>
-  
+  </section>
+
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-6 text-center">
     <p>&copy; shahabajsshaikh 2024. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Dynamically load portfolio items
+    const portfolioItems = [
+      { title: "Project One", description: "Description of Project One." },
+      { title: "Project Two", description: "Description of Project Two." },
+      { title: "Project Three", description: "Description of Project Three." }
+    ];
+
+    const portfolioContainer = document.getElementById('portfolio-items');
+    portfolioItems.forEach(item => {
+      const div = document.createElement('div');
+      div.className = "portfolio-item bg-white shadow p-6 transform transition-transform duration-300";
+      div.innerHTML = `<h3 class="font-bold">${item.title}</h3><p>${item.description}</p>`;
+      portfolioContainer.appendChild(div);
+    });
+
+    // Form validation
+    function validateForm(event) {
+      event.preventDefault();
+      alert('Form submitted successfully!');
+    }
+  </script>
 </body>
 </html>
